@@ -155,5 +155,15 @@ ON m.fall_id = f.id
 GROUP BY f.name
 ORDER BY total;
 
+--Create a view named "meteorite_10000". This view queries meteorites that have 10000 grams or greater. 
+CREATE OR REPLACE VIEW meteorite_10000 AS
+SELECT name,mass,year
+FROM meteorite_data
+WHERE mass >= 10000;
+
+SELECT *
+FROM meteorite_10000;
+
+
 SELECT * FROM meteorite_data;
 
